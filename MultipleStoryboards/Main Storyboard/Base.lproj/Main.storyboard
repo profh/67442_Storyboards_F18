@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AJa-fZ-ydT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="woq-dP-Iho">
+            <objects>
+                <navigationController id="AJa-fZ-ydT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="udC-wc-adY">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AXt-Tk-xZb" kind="relationship" relationship="rootViewController" id="6cl-LJ-kyl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MdF-PD-t4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="372" y="-2"/>
+        </scene>
+        <!--Main Storyboard: Choices-->
+        <scene sceneID="inf-pA-spU">
+            <objects>
+                <viewController id="AXt-Tk-xZb" customClass="ViewController" customModule="MultipleStoryboards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pRB-Bp-pJQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AY4-5f-cML">
+                                <rect key="frame" x="94.5" y="165" width="186" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Storyboard 2: English"/>
+                                <connections>
+                                    <action selector="storyboard2ButtonTapped" destination="AXt-Tk-xZb" eventType="touchUpInside" id="zW0-L2-HBq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvv-6n-VM7">
+                                <rect key="frame" x="95" y="259" width="189" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Storyboard 3: Klingon"/>
+                                <connections>
+                                    <action selector="storyboard3ButtonTapped" destination="AXt-Tk-xZb" eventType="touchUpInside" id="g1G-zn-p7U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dvv-6n-VM7" firstAttribute="centerX" secondItem="pW2-2c-wwr" secondAttribute="centerX" constant="2" id="G1t-s3-Po2"/>
+                            <constraint firstItem="AY4-5f-cML" firstAttribute="centerX" secondItem="pW2-2c-wwr" secondAttribute="centerX" id="aDn-uT-UoK"/>
+                            <constraint firstItem="dvv-6n-VM7" firstAttribute="top" secondItem="AY4-5f-cML" secondAttribute="bottom" constant="58" id="xJ3-wG-08R"/>
+                            <constraint firstItem="AY4-5f-cML" firstAttribute="top" secondItem="pW2-2c-wwr" secondAttribute="top" constant="101" id="ywS-En-en4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pW2-2c-wwr"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main Storyboard: Choices" id="nNj-09-Ix1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="khk-ir-L5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1191" y="-2"/>
+        </scene>
+    </scenes>
+</document>
